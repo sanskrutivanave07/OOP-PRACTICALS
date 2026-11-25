@@ -1,6 +1,4 @@
-Here’s the Practical No. 6 code without the watermark:
 
-```cpp
 #include <iostream>
 #include <string>
 using namespace std;
@@ -40,4 +38,4 @@ int main() {
     // Object is automatically destroyed when main() ends
     return 0;
 }
-```
+

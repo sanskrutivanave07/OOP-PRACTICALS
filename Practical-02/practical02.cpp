@@ -1,6 +1,4 @@
-Here’s the C++ code from Practical No. 2, transcribed without the watermark:
 
-```cpp
 #include <iostream>
 #include <string>
 using namespace std;
@@ -147,4 +145,4 @@ int main() {
 
     return 0;
 }
-```
+

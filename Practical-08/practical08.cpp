@@ -1,6 +1,4 @@
-Here’s the Practical No. 7 code without the watermark:
 
-```cpp
 #include <iostream>
 #include <string>
 using namespace std;
@@ -17,32 +15,54 @@ public:
         age = a;
         contact = c;
     }
-};
 
-class Student : public Person {
-private:
-    int rollNumber;
-    string branch;
-
-public:
-    Student(string n, int a, string c, int r, string b)
-        : Person(n, a, c) {
-        rollNumber = r;
-        branch = b;
-    }
-
-    void display() {
+    void displayPerson() const {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
         cout << "Contact: " << contact << endl;
-        cout << "Roll Number: " << rollNumber << endl;
-        cout << "Branch: " << branch << endl;
+    }
+};
+
+class Employee : public Person {
+protected:
+    int employeeID;
+    string department;
+
+public:
+    Employee(string n, int a, string c, int id, string dept)
+        : Person(n, a, c) {
+        employeeID = id;
+        department = dept;
+    }
+
+    void displayEmployee() const {
+        displayPerson();
+        cout << "Employee ID: " << employeeID << endl;
+        cout << "Department: " << department << endl;
+    }
+};
+
+class Manager : public Employee {
+private:
+    int teamSize;
+
+public:
+    Manager(string n, int a, string c, int id, string dept, int size)
+        : Employee(n, a, c, id, dept) {
+        teamSize = size;
+    }
+
+    void displayManager() const {
+        displayEmployee();
+        cout << "Team Size: " << teamSize << endl;
     }
 };
 
 int main() {
-    Student s1("Anjali", 20, "9876543210", 101, "Computer Science");
-    s1.display();
+    Manager manager("Anjali", 40, "9876543210", 101, "HR", 8);
+
+    cout << "--- Manager Details ---" << endl;
+    manager.displayManager();
 
     return 0;
 }

@@ -1,6 +1,4 @@
-Here’s the Practical No. 3 code without the watermark:
 
-```cpp
 #include <iostream>
 #include <string>
 using namespace std;
@@ -53,4 +51,4 @@ int main() {
 
     return 0;
 }
-```
+

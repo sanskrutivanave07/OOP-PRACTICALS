@@ -1,6 +1,4 @@
-Here’s the Practical No. 7 code without the watermark:
 
-```cpp
 #include <iostream>
 #include <string>
 using namespace std;
